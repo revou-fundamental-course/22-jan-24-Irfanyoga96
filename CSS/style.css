@@ -1,0 +1,218 @@
+*{
+    padding: 0;
+    margin:0; 
+    box-sizing: border-box;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aqua;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 2;
+}
+
+.logo{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    display: flex;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.title{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-top: 120px;
+    flex-direction: column;
+}
+
+.title h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.Konten1{
+    width: 100%;
+    height: 500px;
+    padding-top:100px;
+    display: flex;
+    justify-content: space-around;
+}
+/* SLIDER FOTO */
+.card .img img{
+    width: 350px;
+    height: 350px;
+}
+
+.carousel .card{
+    list-style: none;
+    height: 500px;
+}
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100%/2);
+    gap: 16px;
+    margin-left: 500px;
+}
+.form{
+    display: flex;
+    background-color: aqua;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    height: 450px;
+}
+
+.form form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+}
+.form form input,select{
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+#nama,#email,#btn,#option{ 
+    height: 50px;
+    border-color: transparent;
+}
+
+.konten2{
+    width: 100%;
+    background-color: aqua;
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+    height: 150px;
+    align-items: center;
+}
+
+.konten3{
+    display: flex;
+}
+
+.isi1{
+    display: flex;
+    padding-top: 50px ;
+    justify-content: space-around;
+    padding: 50px;
+    overflow: hidden;
+}
+
+.paket1,.paket2,.paket3,.paket4,.paket5,.paket6{
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.paket1 a,.paket2 a,.paket3 a,.paket4 a,.paket5 a,.paket6 a{
+    text-decoration: none;
+    width: 200px;
+}
+
+.paket1 h3,.paket2 h3,.paket3 h3,.paket4 h3,.paket5 h3,.paket6 h3{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.paket1 p,.paket2 p,.paket3 p,.paket4 p,.paket5 p,.paket6 p{
+    font-size: 12px;
+}
+
+.footer{
+    width: 100%;
+    background-color:  aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.footer h2{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.footer p{
+    font-size: 1rem;
+    margin: 10px;
+    text-align: center;
+}
+
+.btn-footer button{
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height:30px;
+    border-radius: 5px;
+    border: transparent;
+}
+
+/* Resposive Breakpoint */
+
+/* Ukuran Tablet */
+@media screen and (max-width : 768px) {
+    nav ul li{
+        display: flex;
+        margin: 15px;
+    }
+}
+
+/* ukuran handphone */
+@media screen and (max-width :576px) {
+    nav ul li{
+        display: flex;
+        margin: 10px;
+    }
+    .Konten1{
+        width: 100%;
+        height: 500px;
+        padding:500px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .footer p{
+        font-size: 1rem;
+        margin: 10px;
+        text-align: center;
+    }
+}
