@@ -82,3 +82,17 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+
+function validateForm() {
+    var name = document.getElementById('nama').value;
+    var email = document.getElementById('email').value;
+    var option = document.getElementById('option').value;
+  
+    if (name === '' || email === '' || option === '') {
+      alert('datanya jangan dikosongin ya kak');
+    } else {
+      alert('okeee data terkirim');
+    }
+  }
+   

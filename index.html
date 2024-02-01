@@ -15,9 +15,9 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">HOME</a></li>
-                <li><a href="">PRODUCT</a></li>
-                <li><a href="">CONTACT</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#product">PRODUCT</a></li>
+                <li><a href="#callus">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -27,45 +27,45 @@
     <div class="title">
         <h1>BEST ELECTRONIC <br>E-Groceries</h1>
         <br><br>
-        <p>We Will Fix Your Electrical</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<p>
     </div>
 
 
     <!-- Main -->
-    <div class="Konten1">
+    <div id="home" class="Konten1">
         <!-- FOTO -->
         <div class="wrapper">
             <i id="left" class="fas fa-angle-left"></i>
             <ul class="carousel">
                 <li class="card">
                     <div class="img"><img src="CSS/logo.png" alt=""></div>
-                    <h2>Masti</h2>
-                    <span>gorila</span> 
+                    <h2>Aman</h2>
+                    <span>Kelistrikan yang aman membuat hidup lebih tenang</span> 
                 </li>
                 <li class="card">
                     <div class="img"><img src="CSS/bedroom.png" alt=""></div>
-                    <h2>Mega</h2>
-                    <span>gorila</span>
+                    <h2>Nyaman</h2>
+                    <span>Hidup tanpa rasa khawatir di kondisi apapun</span>
                 </li>
                 <li class="card">
                     <div class="img"><img src="CSS/smarthome.png" alt=""></div>
-                    <h2>Morde</h2>
-                    <span>gorila</span>
+                    <h2>Smarthome</h2>
+                    <span>Mengontrol keadaan rumah dimanapun    </span>
                 </li>
             </ul>
             <i id="right" class="fas fa-angle-right"></i>
         </div>
         <form>
             <h3>Contact US</h3>
-            <p>We will calling you Everytime</p>
+            <p>kirim kontak kalian supaya kita <br> tahu apa yang dibutuhkan</p>
             <br>
 
             <label for="Yourname" id="input-nama">Nama</label>
-            <input type="text" name="nama" id="nama"><br>
+            <input placeholder="Yourname" type="text" name="nama" id="nama"><br>
             <br>
 
             <label for="text">Email</label>
-            <input type="text" id="email"><br>
+            <input placeholder="Youremail" type="text" id="email"><br>
             <br>
 
             <label for="text">Keperluan</label>
@@ -75,11 +75,10 @@
                 <option value="option">Keperluan Lain</option>
             </select>
             <br><br>
-
-            <div class="button-header">
-                <label for="button"></label>
-                <input type="button" value="SEND" id="btn">
-                </div>
+            
+            <div>
+                <button type="button" id="btn" onclick="validateForm()">send</button>
+            </div>
         </form>
         </div>
     </div>
@@ -87,7 +86,7 @@
 
 
 <!-- Our Package -->
-    <div class="konten2">
+    <div id="product" class="konten2">
         <H1>PAKET PEMESANAN KAMI</H1>
     </div>
 
@@ -134,12 +133,17 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div id="callus" class="moto">
         <h2>MOTO KAMI</h2>
         <P>kami selalu melayani pelanggan dengan baik, jadi ketika pelanggan ada masalah silahkan klik berikut</P>
         <div class="btn-footer">
             <button>Hubungi kami</button>
         </div>
+    </div>
+    <div class="footer">
+        <h1>Moq</h1>
+        <p>Term Of Service </p>
+        <p>Privacy Policy - 2029</p>
     </div>
 
     <script src="js/script.js" defer></script>
