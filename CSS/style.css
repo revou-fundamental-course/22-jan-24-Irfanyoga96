@@ -57,81 +57,110 @@ nav ul li a {
     text-align: center;
 }
 
-.Konten1{
+/* SLIDER FOTO */
+.Konten1 {
+    width: 100%;
+    margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     padding: 0 35px;
-}
-/* SLIDER FOTO */
-.card .img img{
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-}
+  }
 
-
-.carousel .card{
-    list-style: none;
-    height: 450px;
+.wrapper {
+    max-width: 900px;
     width: 300px;
-    background-color: rgb(232, 232, 232);
+    display: flex;
+    position: relative;
+  }
+  .wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper i:active{
+    transform: translateY(-50%) scale(0.75);
+    -webkit-transform: translateY(-50%) scale(0.75);
+    -moz-transform: translateY(-50%) scale(0.75);
+    -ms-transform: translateY(-50%) scale(0.75);
+    -o-transform: translateY(-50%) scale(0.75);
+}
+  .wrapper i:first-child{
+    left: -35px;
+  }
+  .wrapper i:last-child{
+    right: -22px;
+  }
+  .wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 1) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
     flex-direction: column;
-    cursor: pointer;
-}
+  }
 
-.wrapper i{
-    height: 50px;
-    width: 50px;
-    background-color: aqua;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    top: 50%;
-    transform: translateY(-50);
-    border-radius: 50%;
-    position: relative;
-}
-
-.wrapper i:first-child{
-    left : -25px;
-    top: 250px;
-}
-
-.wrapper :last-child{
-    right : -275px;
-    bottom: 250px;
-}
-
-.wrapper .carousel{
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc(100%/1);
-    gap: 16px;
-    overflow: hidden;
-}
-
-.card h2{
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-.card span{
-    font-size: 1.11rem;
-}
-
-.wrapper{
-    width: 100%;
-    max-width: 1100px;
-}
-
+  .card .img img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 20px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  
 /* FORM */
-.form{
+form{
     display: flex;
+    flex-direction: column;
     background-color: aqua;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -139,21 +168,12 @@ nav ul li a {
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     height: 450px;
+    top: 50%;
+    right: 20%;
+    margin-left: 200px;
 }
 
-.form form{
-    display: flex;
-    flex-direction: column;
-    padding: 10px 30px;
-}
-.form form input,select{
-    width: 100%;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
+
 
 #nama,#email,#btn,#option{ 
     height: 50px;
@@ -240,13 +260,22 @@ nav ul li a {
         margin: 15px;
     }
 
-    .wrapper .carousel{
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: calc(100%/1);
-        gap: 16px;
-        overflow: hidden;
+    .Konten1{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 0 35px;
     }
+    
+    .wrapper {
+        max-width: 900px;
+        width: 300px;
+        display: flex;
+        position: relative;
+        left: 30px;
+      }
 }
 
 /* ukuran handphone */
@@ -255,6 +284,22 @@ nav ul li a {
         display: flex;
         margin: 10px;
     }
+    .Konten1{
+        display: flex;
+        position: relative;
+        left: -3%;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 0 35px;
+    }
+    
+    .wrapper {
+        max-width: 900px;
+        width: 300px;
+        display: flex;
+        position: relative;
+      }
 
     .footer p{
         font-size: 1rem;
@@ -262,3 +307,4 @@ nav ul li a {
         text-align: center;
     }
 }
+
