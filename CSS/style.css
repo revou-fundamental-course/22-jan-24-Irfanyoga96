@@ -1,4 +1,4 @@
-*{
+ *{
     padding: 0;
     margin:0; 
     box-sizing: border-box;
@@ -204,30 +204,32 @@ form{
     display: flex;
     padding-top: 50px ;
     justify-content: space-around;
-    padding: 50px;
-    overflow: hidden;
+    padding: 20px;
+    flex-direction:row;
+
 }
 
-.paket1,.paket2,.paket3,.paket4,.paket5,.paket6{
-    margin: 0 50px;
+.paket1{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 
-.paket1 a,.paket2 a,.paket3 a,.paket4 a,.paket5 a,.paket6 a{
+.paket2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.paket1 a,.paket2 a{
     text-decoration: none;
-    width: 200px;
+    padding: 15px;
 }
 
-.paket1 h3,.paket2 h3,.paket3 h3,.paket4 h3,.paket5 h3,.paket6 h3{
-    font-size: 20px;
-    font-weight: 900;
+.paket1 h3,.paket h3{
+    text-transform: uppercase;
+    font-weight: 700;
 }
-
-.paket1 p,.paket2 p,.paket3 p,.paket4 p,.paket5 p,.paket6 p{
-    font-size: 12px;
-}
-
 .moto{
     width: 100%;
     background-color:  aqua;
